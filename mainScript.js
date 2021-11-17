@@ -1,14 +1,22 @@
-let yesTwelve = true;
+let color = "black";
+let number = 5
 
-function sayTwelve() {
-    if (yesTwelve) {
-        document.getElementById("Dinner").innerHTML = `<p class="big">12</p>`;
-        yesTwelve = false;
-        document.getElementById("changer").innerHTML = "Make 5"
+const numberChanger = () => {
+    if (number === 5) {
+        number = 12;
     } else {
-        document.getElementById("Dinner").innerHTML = "<p>5</p>"
-        yesTwelve = true;
-        document.getElementById("changer").innerHTML = "Press For 12"
+        number = 5;
     }
-}
+    document.getElementById("Dinner").innerHTML = `<p style="color: ${color};"> ${number} </p>`
+};
+
+const colorChanger = () => {
+    if (color === "black") {
+        color = "blue";
+    } else {
+        color = "black";
+    }
+    document.getElementById("Dinner").innerHTML = `<p style="color: ${color};"> ${number} </p>`
+};
+
 
